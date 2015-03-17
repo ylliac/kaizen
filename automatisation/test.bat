@@ -1,5 +1,16 @@
 @echo off
 
+echo Taper 'help' pour la liste des commandes
+
+:: TEST
+
+REM Alias
+DOSKEY toto=dir
+DOSKEY help=(echo toto : liste les fichiers du répertoire & echo help : affiche la liste des commandes)
+
+REM Open the command line prompt
+cmd /k
+
 REM Get the script path
 set scriptPath=%~f0
 echo %scriptPath%
